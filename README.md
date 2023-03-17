@@ -14,3 +14,8 @@ In this guide, I will show how the framework is designed
 **Exections & Assertions**
 - Chai is the tool used for assertions along with built-in assertions from Playwright
 - Mocha is the tool used for test execution along with Playwright execution command line
+
+**To run**
+- Clone the project to your local
+- In root folder, type: npm run test
+- Enjoy :)
