@@ -1,0 +1,41 @@
+{
+  "name": "snws-assignment",
+  "version": "3.0.0",
+  "description": "Tests for api as well as UI",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --fix \"src/**\"",
+    "RaC-test": "mocha ./src/test/API/ --reporter mochawesome",
+    "e2e-test": "npx playwright test --headed",
+    "test": "npx playwright test --headed && mocha ./src/test/API/  --reporter mochawesome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agnasser56/oyster-shipments-task.git"
+  },
+  "author": "Ahmed Elsayed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agnasser56/oyster-shipments-task/issues"
+  },
+  "homepage": "https://github.com/agnasser56/oyster-shipments-task#readme",
+  "dependencies": {
+    "@hapi/joi": "16.1.7",
+    "chai": "^4.2.0",
+    "jsonschema": "^1.4.1",
+    "mocha": "^8.0.1",
+    "mochawesome": "6.1.1",
+    "playwright": "^1.31.2",
+    "playwright-core": "^1.31.2",
+    "supertest": "4.0.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.31.2",
+    "eslint": "7.5.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "2.22.0"
+  }
+}

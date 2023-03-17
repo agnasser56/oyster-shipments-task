@@ -1,0 +1,353 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "shipment"
+    ],
+    "properties": {
+        "shipment": {
+            "type": "object",
+            "default": {},
+            "title": "The shipment Schema",
+            "required": [
+                "id",
+                "timestamp",
+                "catching_material",
+                "type",
+                "source_estuary",
+                "destination_estuary",
+                "species"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The shipment id",
+                    "examples": [
+                        "ABCD-1244"
+                    ]
+                },
+                "timestamp": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The shipment timestamp",
+                    "examples": [
+                        "2023-03-13 20:00:00"
+                    ]
+                },
+                "catching_material": {
+                    "type": "boolean",
+                    "default": false,
+                    "title": "The shipment catching_material present flag",
+                    "examples": [
+                        false, true
+                    ]
+                },
+                "type": {
+                    "type": "string",
+                    "default": "",
+                    "title": "The shipment type",
+                    "examples": [
+                        "stock"
+                    ]
+                },
+                "source_estuary": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The source_estuary Schema",
+                    "required": [
+                        "id",
+                        "name",
+                        "status",
+                        "risks"
+                    ],
+                    "properties": {
+                        "id": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The source estuary id",
+                            "examples": [
+                                18
+                            ]
+                        },
+                        "name": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The source estuary name",
+                            "examples": [
+                                "Bega River"
+                            ]
+                        },
+                        "status": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The source estuary status",
+                            "examples": [
+                                "na"
+                            ]
+                        },
+                        "risks": {
+                            "type": "object",
+                            "default": {},
+                            "title": "The risks Schema",
+                            "required": [
+                                "QX",
+                                "PO_movement",
+                                "POMS"
+                            ],
+                            "properties": {
+                                "QX": {
+                                    "type": "integer",
+                                    "default": 0,
+                                    "title": "The QX disease risk level",
+                                    "examples": [
+                                        0, 1, 2
+                                    ]
+                                },
+                                "PO_movement": {
+                                    "type": "integer",
+                                    "default": 0,
+                                    "title": "The PO_movement risk level",
+                                    "examples": [
+                                        0, 1
+                                    ]
+                                },
+                                "POMS": {
+                                    "type": "integer",
+                                    "default": 0,
+                                    "title": "The POMS risk level",
+                                    "examples": [
+                                        0, 1, 2
+                                    ]
+                                }
+                            },
+                            "examples": [{
+                                "QX": 0,
+                                "PO_movement": 0,
+                                "POMS": 0
+                            }]
+                        }
+                    },
+                    "examples": [{
+                        "id": 18,
+                        "name": "Bega River",
+                        "status": "na",
+                        "risks": {
+                            "QX": 0,
+                            "PO_movement": 0,
+                            "POMS": 0
+                        }
+                    }]
+                },
+                "destination_estuary": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The destination_estuary Schema",
+                    "required": [
+                        "id",
+                        "name",
+                        "status",
+                        "risks"
+                    ],
+                    "properties": {
+                        "id": {
+                            "type": "integer",
+                            "default": 0,
+                            "title": "The id of the estuary",
+                            "examples": [
+                                19
+                            ]
+                        },
+                        "name": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The name of the estuary",
+                            "examples": [
+                                "Bellinger River"
+                            ]
+                        },
+                        "status": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The current status of the estuary",
+                            "examples": [
+                                "flagged", "na"
+                            ]
+                        },
+                        "risks": {
+                            "type": "object",
+                            "default": {},
+                            "title": "The disease risks in the estuary",
+                            "required": [
+                                "QX",
+                                "PO_movement",
+                                "POMS"
+                            ],
+                            "properties": {
+                                "QX": {
+                                    "type": "integer",
+                                    "default": 0,
+                                    "title": "The QX risk level in the estuary",
+                                    "examples": [
+                                        0, 1, 2
+                                    ]
+                                },
+                                "PO_movement": {
+                                    "type": "integer",
+                                    "default": 0,
+                                    "title": "The PO_movement risk level in the estuary",
+                                    "examples": [
+                                        0, 1
+                                    ]
+                                },
+                                "POMS": {
+                                    "type": "integer",
+                                    "default": 0,
+                                    "title": "The POMS risk level in the estuary",
+                                    "examples": [
+                                        0, 1, 2
+                                    ]
+                                }
+                            },
+                            "examples": [{
+                                "QX": 0,
+                                "PO_movement": 0,
+                                "POMS": 0
+                            }]
+                        }
+                    },
+                    "examples": [{
+                        "id": 19,
+                        "name": "Bellinger River",
+                        "status": "flagged",
+                        "risks": {
+                            "QX": 0,
+                            "PO_movement": 0,
+                            "POMS": 0
+                        }
+                    }]
+                },
+                "species": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The species Schema",
+                    "required": [
+                        "name",
+                        "size",
+                        "culled",
+                        "spat"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The name Schema",
+                            "examples": [
+                                "Sydney Oyster", "Pacific Oyster"
+                            ]
+                        },
+                        "size": {
+                            "type": "string",
+                            "default": "",
+                            "title": "species size",
+                            "examples": [
+                                "lt_25mm", "gte_50mm"
+                            ]
+                        },
+                        "culled": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "species culled status",
+                            "examples": [
+                                false
+                            ]
+                        },
+                        "spat": {
+                            "type": "boolean",
+                            "default": false,
+                            "title": "species spat ",
+                            "examples": [
+                                false
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "name": "Sydney Oyster",
+                        "size": "lt_25mm",
+                        "culled": false,
+                        "spat": false
+                    }]
+                }
+            },
+            "examples": [{
+                "id": "ABCD-1244",
+                "timestamp": "2023-03-13 20:00:00",
+                "catching_material": false,
+                "type": "stock",
+                "source_estuary": {
+                    "id": 18,
+                    "name": "Bega River",
+                    "status": "na",
+                    "risks": {
+                        "QX": 0,
+                        "PO_movement": 0,
+                        "POMS": 0
+                    }
+                },
+                "destination_estuary": {
+                    "id": 19,
+                    "name": "Bellinger River",
+                    "status": "flagged",
+                    "risks": {
+                        "QX": 0,
+                        "PO_movement": 0,
+                        "POMS": 0
+                    }
+                },
+                "species": {
+                    "name": "Sydney Oyster",
+                    "size": "lt_25mm",
+                    "culled": false,
+                    "spat": false
+                }
+            }]
+        }
+    },
+    "examples": [{
+        "shipment": {
+            "id": "ABCD-1244",
+            "timestamp": "2023-03-13 20:00:00",
+            "catching_material": false,
+            "type": "stock",
+            "source_estuary": {
+                "id": 18,
+                "name": "Bega River",
+                "status": "na",
+                "risks": {
+                    "QX": 0,
+                    "PO_movement": 0,
+                    "POMS": 0
+                }
+            },
+            "destination_estuary": {
+                "id": 19,
+                "name": "Bellinger River",
+                "status": "flagged",
+                "risks": {
+                    "QX": 0,
+                    "PO_movement": 0,
+                    "POMS": 0
+                }
+            },
+            "species": {
+                "name": "Sydney Oyster",
+                "size": "lt_25mm",
+                "culled": false,
+                "spat": false
+            }
+        }
+    }]
+}

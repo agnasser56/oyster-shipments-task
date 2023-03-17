@@ -1,0 +1,34 @@
+{
+    "shipment": {
+        "id": "ABCD-1244",
+        "timestamp": "2023-03-14 20:00:00",
+        "catching_material": false,
+        "type": "stock",
+        "source_estuary": {
+            "id": 24,
+            "name": "Brisbane River",
+            "status": "na",
+            "risks": {
+                "QX": 0,
+                "PO_movement": 0,
+                "POMS": 0
+            }
+        },
+        "destination_estuary": {
+            "id": 39,
+            "name": "Brisbane River",
+            "status": "flagged",
+            "risks": {
+                "QX": 0,
+                "PO_movement": 0,
+                "POMS": 0
+            }
+        },
+        "species": {
+            "name": "Sydney Oyster",
+            "size": "lt_25mm",
+            "culled": false,
+            "spat": false
+        }
+    }
+}
