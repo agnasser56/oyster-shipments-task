@@ -17,6 +17,8 @@ In this guide, I will show how the framework is designed
 
 **To run**
 - Clone the project to your local
-- In root folder, type: npm run test
+- In root folder:
+  - Open Powershell window(windoes), terminal (Mac), and type: npm init playwright@latest
+  - Type: npm run test
 - Enjoy :)
 - [test execution.webm](https://user-images.githubusercontent.com/9838164/226177723-b257c117-a9c6-4e59-9104-6b7849c582fa.webm)
