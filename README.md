@@ -20,5 +20,6 @@ In this guide, I will show how the framework is designed
 - In root folder:
   - Open Powershell window(windoes), terminal (Mac), and type: npm init playwright@latest
   - Type: npm run test
+- Test execution: https://user-images.githubusercontent.com/9838164/226178489-c67c57b4-6dfa-423c-a63b-003aff6de289.mp4
 - Enjoy :)
 - 
