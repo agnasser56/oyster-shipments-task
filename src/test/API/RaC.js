@@ -7,7 +7,7 @@ var validate = require('jsonschema').validate;
 var authToken = '';
 
 
-describe('Contract testing of endpoint /products', () => {
+describe('testing of RaC endpoint', () => {
   before(function (done) {
     // Get the authorization token to be used in subsequesnt tests
     request(authURL)
@@ -29,7 +29,7 @@ describe('Contract testing of endpoint /products', () => {
       .post(payloadData)
       .expect(function (res) {
         // Read the JSON Schema from the same directory as RaC.js
-        var schema = JSON.parse(fs.readFileSync('./src/test/API/stock_schema.json'));
+        var schema = JSON.parse(fs.readFileSync('./src/schemas/stock_schema.json'));
         console.log(validate(res.body, schema).errors.toString())
         assert.equal(validate(res.body, schema).errors.length, 0);
       })
@@ -40,7 +40,6 @@ describe('Contract testing of endpoint /products', () => {
     request(url)
       .post('/')
       .auth('eyJhbGciOiJSUzI1NiIsInR5cCI6', { type: 'bearer' })
-      .send({ tittle: 'Supertest', body: 'Exemplo Supertest' })
       .expect('Content-Type', /json/)
       .end((err, res) => {
         assert.equal(res.status, 401);
